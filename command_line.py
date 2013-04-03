@@ -30,6 +30,7 @@ import argparse
 import debugger
 import shared
 import logging
+import sys
 from disassemble import Disassemble
 from elftools.elf.segments import LoadSegment
 from elftools.elf.note import NoteSegment
