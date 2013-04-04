@@ -1,7 +1,9 @@
 # Introduction
 *pycdb* stands for **Python Core Debugger** or **Python C Debugger**.
 
-**pycdb** is a debugger completely written in Python using pyelftools library. It reads symbol([ELF](http://en.wikipedia.org/wiki/Executable_and_Linkable_Format)) files, parses debug([DWARF](http://en.wikipedia.org/wiki/DWARF))sections, reads coredump(elfcore) files and executes the command given. 
+**pycdb** is a debugger completely written in Python using pyelftools library. It reads symbol([ELF](http://en.wikipedia.org/wiki/Executable_and_Linkable_Format)) files, parses debug([DWARF](http://en.wikipedia.org/wiki/DWARF))sections, reads coredump(elfcore) files and executes the commands given.
+
+![Backtrace with color](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/colored-backtrace.png)
 
 # Features
 * Input and output can be redirected.
@@ -12,7 +14,7 @@
 
 ## Commands
 
-* *backtrace* - CFI walker(even on -fomitframe) or stack walker(just in case needed).
+* *backtrace* - CFI walker(even if compiled -fomitframe) or stack walker(just in case needed).
 * *info threads* - List all the threads in the core
 * *info registers* - Provide register information of the current frame
 * *list* - Display source file with syntax coloring.
@@ -35,10 +37,9 @@
 
 ### Screenshots
 ![Source listing](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/list.png)
-![Backtrace with color](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/colored-backtrace.png)
 ![Disassembly](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/disassemble.png)
+![Examining a data structure](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/die.png)
 ![Help](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/help.png)
-![Examining a data structure](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/die.py)
 
 ## Scripting
 Debugger helper functions are provided to get thread/frame/register etc. Using those functions new python programs can be written easily as needed. For example to print backtrace
