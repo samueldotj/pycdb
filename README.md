@@ -29,9 +29,16 @@
 
 ### Examples
 
-* To show backtrace **`pycdb.py -s a.out -c core backtrace`**
-* To show backtrace with color **`pycdb.py -s a.out -c core -cl c list`**
-* To disassemble and grep for EAX **`pycdb.py -c core_file -s symbol_file -nc disassemble | grep -i -e 'EAX'`**
+* To show backtrace **`pycdb.py backtrace`**
+* To show backtrace with color **`pycdb.py list`**
+* To disassemble and grep for EAX **`pycdb.py -nc disassemble | grep -i -e 'EAX'`**
+
+### Screenshots
+![Source listing](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/list.png)
+![Backtrace with color](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/colored-backtrace.png)
+![Disassembly](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/disassemble.png)
+![Help](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/help.png)
+![Examining a data structure](https://bitbucket.org/samueldotj/pycdb/raw/master/screenshots/die.py)
 
 ## Scripting
 Debugger helper functions are provided to get thread/frame/register etc. Using those functions new python programs can be written easily as needed. For example to print backtrace
